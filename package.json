@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joshua Olajide",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "workbox-cli": "^5.1.2"
+  }
 }
