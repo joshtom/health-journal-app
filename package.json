@@ -1,0 +1,11 @@
+{
+  "name": "journalapp",
+  "version": "1.0.0",
+  "description": "To share health status with doctor",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Olajide",
+  "license": "ISC"
+}
