@@ -1,0 +1,33 @@
+/* HSL */
+$primary: hsla(324%, 92%, 10%, 1);
+$primary-dark: hsla(233%, 84%, 45%, 1);
+$secondary: hsla(156%, 41%, 44%, 1);
+$warning: hsla(34%, 69%, 61%, 1);
+$warning-light: hsla(50%, 99%, 59%, 1);
+$white: hsla(60%, 14%, 99%, 1);
+$info: hsla(69%, 88%, 73%, 1);
+$dark: hsla(240%, 1%, 0%, 1);
+
+// Load font family from google
+ * {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    // font-family: 'Lovers Quarrel', cursive;
+    // font-family: 'Pontano Sans', sans-serif;
+    color: $dark;
+ }
+$min_width: 400;
+$max_width: 800;
+$min_font: 12;
+$max_font: 16; 
+:root { font-size: #{$min_font}px; letter-spacing: 0.03em; }
+@media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+  :root { 
+    font-size: calc( #{$min_font}px + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+  }
+}
+@media (min-width: #{$max_width}px){
+   :root { 
+     font-size: #{$max_font}px;
+   }
+}
+

@@ -1,14 +1,21 @@
 {
-  "name": "journalapp",
+  "name": "jounal-app",
   "version": "1.0.0",
-  "description": "To share health status with doctor",
-  "main": "index.html",
+  "description": "For sharing current health status with Doctor",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy": "copyfiles -u 1 src/**/**/* src/**/* src/* build",
+    "build": "npm run copy && workbox injectManifest workbox-config.js",
+    "start": "node server.js"
   },
-  "author": "Joshua Olajide",
+  "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
   "devDependencies": {
-    "workbox-cli": "^5.1.2"
+    "copyfiles": "^1.2.0",
+    "workbox-cli": "^3.5.0"
   }
 }
