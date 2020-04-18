@@ -14,11 +14,12 @@ module.exports = {
   "globPatterns": [
     "**/*.css",
     "**/*.scss",
-    "js/animation.js",
+    "js/script.js",
     "index.html",
     "manifest.webmanifest",
     "images/*.png",
-    "images/.svg",
+    "pages/offline.html"
+    // "images/.svg",
   ],
   "swSrc": "src/sw.js",
   "swDest": "build/sw.js",

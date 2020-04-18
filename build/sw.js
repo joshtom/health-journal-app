@@ -18,7 +18,56 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox
 if(workbox) {
     console.log('Yay, workbox is working');
 
-    workbox.precaching.precacheAndRoute([]);
+    workbox.precaching.precacheAndRoute([
+  {
+    "url": "style/main.css",
+    "revision": "fd6a61989b7253635cc417b0e59f4e4e"
+  },
+  {
+    "url": "sass/main.scss",
+    "revision": "d6a73964e7b811c1e24d522c79dd52d9"
+  },
+  {
+    "url": "js/script.js",
+    "revision": "9694a9a80eb148b8dfd1068ee51b11ab"
+  },
+  {
+    "url": "index.html",
+    "revision": "1f8e77414a0c31da57c9d21ad52fd11e"
+  },
+  {
+    "url": "manifest.webmanifest",
+    "revision": "4358242651be7e9baa3d85e4aa459f39"
+  },
+  {
+    "url": "images/custom-install.png",
+    "revision": "1667ad0a60284d3a7d0519154cdef890"
+  },
+  {
+    "url": "images/end-of-game-install.png",
+    "revision": "11c1fd9182e3acb1c5c0ec9ab06a4856"
+  },
+  {
+    "url": "images/in-feed-install.png",
+    "revision": "140f33d4dab6a9108236ca198bd879d9"
+  },
+  {
+    "url": "images/install-promotion.png",
+    "revision": "85f059fdba14a5aa2d61a43445fed895"
+  },
+  {
+    "url": "images/install-prompt.png",
+    "revision": "927033da1b110001b42d3cccfd8bfa0a"
+  },
+  {
+    "url": "images/signup-journey.png",
+    "revision": "e7bc3451e51631452ee5bc7592321032"
+  },
+  {
+    "url": "images/user-journey.png",
+    "revision": "f05fa228e50bcb7eda1b974fae75bf46"
+  }
+]);
     // Adding routing
     workbox.routing.registerRoute(
         /(.*)articles(.*)\.(?:png|gif|jpg)/,
@@ -32,7 +81,7 @@ if(workbox) {
           ]
         })
       );
-      const homePage = workbox.strategies.networkFirst({
+      const articleHandler = workbox.strategies.networkFirst({
         cacheName: 'articles-cache',
         plugins: [
           new workbox.expiration.Plugin({
@@ -41,8 +90,8 @@ if(workbox) {
         ]
       });
       
-      workbox.routing.registerRoute(/(.*)index(.*)\.html/, args => {
-        return homePage.handle(args).then((response) => {
+      workbox.routing.registerRoute(/(.*)article(.*)\.html/, args => {
+        return articleHandler.handle(args).then((response) => {
             // Args returns a promise to handle invalid responses
             if (!response) {
                 return caches.match('pages/offline.html');
