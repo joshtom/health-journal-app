@@ -33,7 +33,7 @@ if(workbox) {
         })
       );
       const homePage = workbox.strategies.networkFirst({
-        cacheName: 'articles-cache',
+        cacheName: 'homepage-cache',
         plugins: [
           new workbox.expiration.Plugin({
             maxEntries: 50,
@@ -50,25 +50,6 @@ if(workbox) {
                 return caches.match('pages/404.html');
               }
               return response;
-        })
-      });
-
-      const postHandler = workbox.strategies.cacheFirst({
-        cacheName: 'posts-cache',
-        plugins: [
-          new workbox.expiration.Plugin({
-            maxEntries: 50,
-          })
-        ]
-      })
-      workbox.routing.registerRoute(/(.*)post(.*)\.html/, args => {
-        return postHandler.handle(args).then((response) => {
-           if(response.status === 404 ) {
-            return caches.match('pages/404.html');
-           }
-           return response
-        }).catch(() => {
-            return caches.match('pages/offline.html');
         })
       });
 

@@ -21,11 +21,11 @@ if(workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "style/main.css",
-    "revision": "fd6a61989b7253635cc417b0e59f4e4e"
+    "revision": "00b833e344444d810d57a33ba159e887"
   },
   {
     "url": "sass/main.scss",
-    "revision": "d6a73964e7b811c1e24d522c79dd52d9"
+    "revision": "2a071f78b90b6efb35e43c70043af3b2"
   },
   {
     "url": "js/script.js",
@@ -66,6 +66,10 @@ if(workbox) {
   {
     "url": "images/user-journey.png",
     "revision": "f05fa228e50bcb7eda1b974fae75bf46"
+  },
+  {
+    "url": "pages/offline.html",
+    "revision": "ac391351493317fabdd57f3b4b3d04aa"
   }
 ]);
     // Adding routing
@@ -81,8 +85,8 @@ if(workbox) {
           ]
         })
       );
-      const articleHandler = workbox.strategies.networkFirst({
-        cacheName: 'articles-cache',
+      const homePage = workbox.strategies.networkFirst({
+        cacheName: 'homepage-cache',
         plugins: [
           new workbox.expiration.Plugin({
             maxEntries: 50,
@@ -90,8 +94,8 @@ if(workbox) {
         ]
       });
       
-      workbox.routing.registerRoute(/(.*)article(.*)\.html/, args => {
-        return articleHandler.handle(args).then((response) => {
+      workbox.routing.registerRoute(/(.*)index(.*)\.html/, args => {
+        return homePage.handle(args).then((response) => {
             // Args returns a promise to handle invalid responses
             if (!response) {
                 return caches.match('pages/offline.html');
@@ -99,25 +103,6 @@ if(workbox) {
                 return caches.match('pages/404.html');
               }
               return response;
-        })
-      });
-
-      const postHandler = workbox.strategies.cacheFirst({
-        cacheName: 'posts-cache',
-        plugins: [
-          new workbox.expiration.Plugin({
-            maxEntries: 50,
-          })
-        ]
-      })
-      workbox.routing.registerRoute(/(.*)post(.*)\.html/, args => {
-        return postHandler.handle(args).then((response) => {
-           if(response.status === 404 ) {
-            return caches.match('pages/404.html');
-           }
-           return response
-        }).catch(() => {
-            return caches.match('pages/offline.html');
         })
       });
 
