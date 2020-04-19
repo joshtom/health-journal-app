@@ -15,17 +15,21 @@ limitations under the License.
 */
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js');
+
+
+
+
 if(workbox) {
     console.log('Yay, workbox is working');
 
     workbox.precaching.precacheAndRoute([
   {
     "url": "style/main.css",
-    "revision": "00b833e344444d810d57a33ba159e887"
+    "revision": "08e8151a354b30c0c8edc8977e2c44ab"
   },
   {
     "url": "sass/main.scss",
-    "revision": "2a071f78b90b6efb35e43c70043af3b2"
+    "revision": "c102a50c020fbafeef8e2ed0d91f0670"
   },
   {
     "url": "js/script.js",
@@ -33,7 +37,7 @@ if(workbox) {
   },
   {
     "url": "index.html",
-    "revision": "1f8e77414a0c31da57c9d21ad52fd11e"
+    "revision": "1aab3ad553bee1b3e6cffa9968b23dcd"
   },
   {
     "url": "manifest.webmanifest",
@@ -105,8 +109,30 @@ if(workbox) {
               return response;
         })
       });
+      // Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
+      workbox.routing.registerRoute(
+        /^https:\/\/fonts\.googleapis\.com/,
+        new workbox.strategies.StaleWhileRevalidate({
+          cacheName: 'google-fonts-stylesheets',
+        })
+      );
 
-      
+      // Cache the underlying font files with a cache-first strategy for 1 year.
+      workbox.routing.registerRoute(
+        /^https:\/\/fonts\.gstatic\.com/,
+        new workbox.strategies.CacheFirst({
+          cacheName: 'google-fonts-webfonts',
+          plugins: [
+            new workbox.cacheableResponse.CacheableResponse({
+              statuses: [0, 200],
+            }),
+            new workbox.expiration.Plugin({
+              maxAgeSeconds: 60 * 60 * 24 * 365,
+              maxEntries: 30,
+            }),
+          ],
+        })
+      );
       
 } else {
     console.log('Workbox didnt load correctly');

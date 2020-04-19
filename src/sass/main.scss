@@ -8,12 +8,19 @@ $white: hsla(60%, 14%, 99%, 1);
 $info: hsla(69%, 88%, 73%, 1);
 $dark: hsla(240%, 1%, 0%, 1);
 
-// Load font family from google
+// Font family variables
+$fira: 'Fira Sans Extra Condensed', sans-serif;
+$lover: 'Lovers Quarrel', cursive;
+$pontano: 'Pontano Sans', sans-serif;
  * {
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
-    // font-family: 'Lovers Quarrel', cursive;
-    // font-family: 'Pontano Sans', sans-serif;
     color: $dark;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
  }
 $min_width: 400;
 $max_width: 800;
@@ -29,3 +36,18 @@ $max_font: 16;
 .padded {padding: 0 10%;}
 .back-link {padding-bottom: 10%;}
 
+#homepage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  section.left {
+    width: 50vw;
+    min-height: 100%;
+    background: $primary;
+  }
+  section.right {
+    width: 50vw;
+    min-height: 100%;
+    background: $warning-light;
+  }
+}
