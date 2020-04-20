@@ -1,17 +1,19 @@
 {
-    "short_name": "Weather",
-    "name": "Weather: Do I need an umbrella?",
-    "description": "Weather forecast information",
+    "short_name": "Health-Journal",
+    "name": "Health-Journal web app",
+    "description": "To log your health status and share it with your doctor quickly",
     "icons": [
       {
-        "src": "/images/alarm.svg",
-        "type": "image/svg",
-        "sizes": "192x192"
+        "src": "/images/report.png",
+        "type": "image/png",
+        "sizes": "13x13",
+        "purpose": "any maskable"
       },
       {
-        "src": "/images/alarm.svg",
-        "type": "image/svg",
-        "sizes": "512x512"
+        "src": "/images/report.png",
+        "type": "image/png",
+        "sizes": "144x144",
+        "purpose": "any maskable"
       }
     ],
     "start_url": "/?source=pwa",
