@@ -58,7 +58,7 @@ tl.fromTo("#doc", {drawSVG:"100%"}, {duration: 1, drawSVG:"50% 50%", stagger: 0.
 bell.to("#bell",
       {duration: 0.15, 
        x: 50, 
-       fill: 'red'})
+       fill: '#1229d3'})
   .to("#bell", 
       { duration: 1, 
        ease: "elastic.out(1, 0.3)", 
@@ -68,12 +68,12 @@ bell.to("#bell",
 .repeatDelay(10)
 
 bell.to(".circle", 
-      {duration: 0.4, 
+      {duration: 0.2, 
        scale:'1.2',
        ease: "bounce.out",
       })
 .to(".circle", 
-    {duration: .4, 
+    {duration: 0.2, 
      scale: '1', 
      ease: "bounce.in",
     })

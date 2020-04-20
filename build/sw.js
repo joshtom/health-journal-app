@@ -5,15 +5,15 @@ if(workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "style/main.css",
-    "revision": "1397408a5109b32b54e484d5fe928d4a"
+    "revision": "40f304bedd82ca751f79bf86a3d7d444"
   },
   {
     "url": "sass/main.scss",
-    "revision": "18ddbac3020524e6844a1cc360a7ef36"
+    "revision": "88bbac6d22df9a68f4866c3e3d1e5e95"
   },
   {
     "url": "js/script.js",
-    "revision": "0dc664a8f443057a34c461d3fc81d7e7"
+    "revision": "a032030701ac38f0b53c353a49d35840"
   },
   {
     "url": "index.html",
