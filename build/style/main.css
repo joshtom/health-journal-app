@@ -9,6 +9,9 @@
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
+body {
+  overflow-x: hidden; }
+
 :root {
   font-size: 12px;
   letter-spacing: 0.03em; }

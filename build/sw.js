@@ -5,19 +5,19 @@ if(workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "style/main.css",
-    "revision": "5b3f2d8139825b4aeb713c300a044368"
+    "revision": "0a19d7830ca68559ca577b13388fd897"
   },
   {
     "url": "sass/main.scss",
-    "revision": "81c8739018235f4f054e2dc906739711"
+    "revision": "dad8bfe89705e78dcb709936f20e9530"
   },
   {
     "url": "js/script.js",
-    "revision": "0ae52bbe4868b4f48f789389c38a41a6"
+    "revision": "14a50e0ec58ffd86abe44cea7e0c501d"
   },
   {
     "url": "index.html",
-    "revision": "193d3ae4c89793d8995aa7fc07b17d0a"
+    "revision": "7ae17e3bfa1f24b32090f1f8cd7be700"
   },
   {
     "url": "manifest.webmanifest",

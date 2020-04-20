@@ -39,12 +39,9 @@
   // Animating text on landing page
 
   var tl = gsap.timeline(),
-  bell = gsap.timeline(),
-  draw = gsap.timeline({repeat:1, yoyo:true});
+  bell = gsap.timeline();
 
-draw.fromTo("#doc", {drawSVG:"100%"}, {duration: 1, drawSVG:"50% 50%", stagger: 0.1})
-
-draw.fromTo("#tors", {drawSVG:"100%"}, {duration: 1, drawSVG:"50% 50%", stagger: 0.1})
+tl.from("#doc", {duration: .6, x: 1000, ease: "power", opacity: 0})
 
 tl.from("h1#heading", {duration: .6, x: 1000, ease: "power", opacity: 0})
 
