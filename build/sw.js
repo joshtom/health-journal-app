@@ -1,43 +1,23 @@
-/*
-Copyright 2018 Google Inc.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
-
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js');
-
-
-
-
 if(workbox) {
     console.log('Yay, workbox is working');
 
     workbox.precaching.precacheAndRoute([
   {
     "url": "style/main.css",
-    "revision": "08e8151a354b30c0c8edc8977e2c44ab"
+    "revision": "1397408a5109b32b54e484d5fe928d4a"
   },
   {
     "url": "sass/main.scss",
-    "revision": "c102a50c020fbafeef8e2ed0d91f0670"
+    "revision": "18ddbac3020524e6844a1cc360a7ef36"
   },
   {
     "url": "js/script.js",
-    "revision": "9694a9a80eb148b8dfd1068ee51b11ab"
+    "revision": "0dc664a8f443057a34c461d3fc81d7e7"
   },
   {
     "url": "index.html",
-    "revision": "1aab3ad553bee1b3e6cffa9968b23dcd"
+    "revision": "04507f5560d61999286b9d84f79cdec7"
   },
   {
     "url": "manifest.webmanifest",
@@ -131,6 +111,19 @@ if(workbox) {
               maxEntries: 30,
             }),
           ],
+        })
+      );
+
+      // Cache gsap animation 
+      workbox.routing.registerRoute(
+        new RegExp('^https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js'),
+        new workbox.strategies.CacheFirst({
+          cacheName: 'image-cache',
+          plugins: [
+            new workbox.cacheableResponse.CacheableResponse({
+              statuses: [0, 200],
+            })
+          ]
         })
       );
       

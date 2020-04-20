@@ -36,18 +36,140 @@ $max_font: 16;
 .padded {padding: 0 10%;}
 .back-link {padding-bottom: 10%;}
 
+h1, h2, h3, h5, h5, h6 {
+  font-family: $fira;
+}
+p {
+  font-family: $lover;
+}
+article {
+  font-family: $pontano;
+}
+#notify {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: auto;
+  height: auto;
+  svg {
+    width: 100%;
+     
+  }
+   #bell {
+      width:50px;
+  }
+  .circle {
+          width: 35px;
+          height: 35px;
+          background: red;
+          border-radius: 50%;
+          position: relative;
+          top: 22px;
+          right: 6px;
+          z-index: 1000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 20px;
+          border: 4px solid white;
+          
+          p {
+            color: white;
+            font-weight: bold;
+            font-variant: unset;
+            font-kerning: normal;
+          }
+        }
+
+}
 #homepage {
   height: 100vh;
   width: 100vw;
+  background: $white;
+  color: $dark;
   display: flex;
-  section.left {
-    width: 50vw;
-    min-height: 100%;
-    background: $primary;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 40px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='0.69' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(46.65) translate(-978.56 -733.92)'%3E%3Cuse fill='%23fafafa' href='%23s' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='2'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(46.65) translate(-978.56 -733.92)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(46.65) translate(-978.56 -733.92)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(46.65) translate(-978.56 -733.92)'%3E%3Cg fill='%23e5e5e5'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(46.65) translate(-978.56 -733.92)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23e0e0e0'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(46.65) translate(-978.56 -733.92)'%3E%3Cg fill='%23429e79'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(46.65) translate(-978.56 -733.92)'%3E%3Cg fill='%23429e79'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(46.65) translate(-978.56 -733.92)'%3E%3Cg fill='%23429e79'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+
+  @media screen and (max-width: 500px){
+    flex-flow: row-reverse wrap-reverse;
   }
-  section.right {
-    width: 50vw;
-    min-height: 100%;
-    background: $warning-light;
+  section#left {
+    
+    h1 {
+      font-size: 4rem;
+      @media screen and (max-width: 500px){
+        margin-top:-200px;
+      }
+    }    
+    article {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      line-height: 1.4;
+      width: 500px;
+      margin-bottom: 20px;
+      color: #4e4e4ec7;
+      @media screen and (max-width: 500px){
+        width: 100%;
+      }
+    }
+    button#getStarted {      
+      height: 50px;
+      width: 50%;
+      transition: all 350ms ease-in-out;
+      background: hsla(233, 100%, 75%, 0.51);
+      color: $primary-dark;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      &:hover, &:focus-within {
+        background: $primary-dark;
+        color: $white;
+      }
+      @media screen and (max-width: 500px){
+        width: 100%;
+      }
+    }
+  }
+
+  section#right {
+    display: none;
+
+    @media screen and (max-width: 500px){
+      display: block;
+    }
+  }
+
+  // section#diagonal {
+  //   background: $warning-light;
+  //   width: 500px;
+  //   height: 200px;
+  //   clip-path: polygon(0 100%, 100% 28%, 100% 100%, 0 100%);
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   display: none;
+  //   @media screen and (max-width: 400px){
+  //     display: block;
+  //   }
+  // }
+
+  // Filling the svg with colors
+  svg {
+    width: 100%;
+    height: 200px;
+    margin: auto;
+  }
+  #doc {
+    fill: $secondary;
+    stroke: $primary-dark;
+  }
+  #tors {
+    fill: $info;
   }
 }

@@ -35,3 +35,47 @@
   });
     });
   }
+
+  // Animating text on landing page
+
+  var tl = gsap.timeline(),
+  bell = gsap.timeline(),
+  mySplitText = new SplitText("#quote", {type:"words,chars"}), 
+  chars = mySplitText.chars; //an array of all the divs that wrap each character
+
+gsap.set("#quote", {perspective: 400});
+
+tl.from("h1#heading", {duration: .6, x: 1000, ease: "power", opacity: 0})
+
+tl.from(chars, {duration: 0.8, opacity:0, scale:0, y:80, rotationX:180, transformOrigin:"0% 50% -50",  ease:"back", stagger: 0.01}, "+=0");
+
+tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)", opacity: 0})
+
+
+tl.fromTo("#doc", {drawSVG:"100%"}, {duration: 1, drawSVG:"50% 50%", stagger: 0.1})
+
+// Animate the notification icon
+bell.to("#bell",
+      {duration: 0.15, 
+       x: 50, 
+       fill: 'red'})
+  .to("#bell", 
+      { duration: 1, 
+       ease: "elastic.out(1, 0.3)", 
+       x: 0, 
+       fill: 'black'})
+.repeat(-1)
+.repeatDelay(10)
+
+bell.to(".circle", 
+      {duration: 0.4, 
+       scale:'1.2',
+       ease: "bounce.out",
+      })
+.to(".circle", 
+    {duration: .4, 
+     scale: '1', 
+     ease: "bounce.in",
+    })
+ 
+

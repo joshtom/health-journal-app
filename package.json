@@ -9,7 +9,7 @@
     "build": "npm run copy && workbox injectManifest workbox-config.js",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "olajide-joshua",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3"
