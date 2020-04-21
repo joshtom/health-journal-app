@@ -175,17 +175,31 @@ article {
 #howdy {
   width: 100%;
   height: 100vh;
-  background: $primary-dark;
+  background: $primary;
   display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
   color: $white;
   #que {
-    
+    h2 {
+      color: $white;
+    }
   }
   #ans {
-    scroll-snap-type: x mandatory;
-
+    display: flex;
+    overflow-x: scroll;
     section {
       scroll-snap-align: center;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      span {
+        font-size: 35px;
+      }
     }
   }
 }
