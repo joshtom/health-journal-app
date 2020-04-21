@@ -24,6 +24,10 @@ $pontano: 'Pontano Sans', sans-serif;
  }
  body {
    overflow-x: hidden;
+   -webkit-overflow-x: hidden;
+   -o-overflow-x: hidden;
+   -ms-overflow-x: hidden;
+   -moz-overflow-x: hidden;
  }
 $min_width: 400;
 $max_width: 800;
@@ -107,7 +111,12 @@ article {
     h1 {
       font-size: 4rem;
       @media screen and (max-width: 500px){
+        font-size: 3rem;
         margin-top:-200px;
+        -moz-margin-top:-200px;
+        -ms-margin-top:-200px;
+        -webkit-margin-top:-200px;
+        -o-margin-top:-200px;
       }
     }    
     article {

@@ -10,7 +10,11 @@
   -moz-box-sizing: border-box; }
 
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -webkit-overflow-x: hidden;
+  -o-overflow-x: hidden;
+  -ms-overflow-x: hidden;
+  -moz-overflow-x: hidden; }
 
 :root {
   font-size: 12px;
@@ -87,7 +91,12 @@ article {
     font-size: 4rem; }
     @media screen and (max-width: 500px) {
       #homepage section#left h1 {
-        margin-top: -200px; } }
+        font-size: 3rem;
+        margin-top: -200px;
+        -moz-margin-top: -200px;
+        -ms-margin-top: -200px;
+        -webkit-margin-top: -200px;
+        -o-margin-top: -200px; } }
   #homepage section#left article {
     font-size: 1.3rem;
     letter-spacing: 1px;
