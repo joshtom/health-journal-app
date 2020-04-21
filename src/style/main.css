@@ -29,10 +29,10 @@ h1, h2, h3, h5, h5, h6 {
   font-family: "Fira Sans Extra Condensed", sans-serif; }
 
 p {
-  font-family: "Pontano Sans", sans-serif; }
+  font-family: "Lovers Quarrel", cursive; }
 
 article {
-  font-family: "Lovers Quarrel", cursive; }
+  font-family: "Pontano Sans", sans-serif; }
 
 #notify {
   position: fixed;
@@ -139,11 +139,12 @@ article {
   justify-content: center;
   align-items: center;
   color: #fdfdfc; }
-  #howdy #que h2 {
+  #howdy #que p#text {
+    font-size: 50px;
     color: #fdfdfc; }
   #howdy #ans {
     display: flex;
-    overflow-x: scroll; }
+    flex-flow: row wrap; }
     #howdy #ans p {
       scroll-snap-align: center;
       color: #fdfdfc;
@@ -151,10 +152,19 @@ article {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 20px;
-      font-size: 25px; }
+      margin: 10px 20px 10px 20px;
+      border-radius: 13px;
+      margin: 6px 4px 2px 6px;
+      padding: 5px 10px 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 300ms all cubic-bezier(0.165, 0.84, 0.44, 1);
+      font-family: "Pontano Sans", sans-serif; }
       #howdy #ans p span {
         font-size: 40px;
         color: #fdfdfc; }
+      #howdy #ans p:hover, #howdy #ans p:focus-within {
+        box-shadow: 6px 6px 27px #e0a557, -6px -6px 27px #fdfdfc;
+        transform: scale(1.1); }
 
 /*# sourceMappingURL=main.css.map */

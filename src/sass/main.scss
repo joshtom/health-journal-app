@@ -47,10 +47,10 @@ h1, h2, h3, h5, h5, h6 {
   font-family: $fira;
 }
 p {
-  font-family: $pontano;
+  font-family: $lover;
 }
 article {
-  font-family: $lover;
+  font-family: $pontano;
 }
 #notify {
   position: fixed;
@@ -182,13 +182,14 @@ article {
   align-items: center;
   color: $white;
   #que {
-    h2 {
+    p#text {
+      font-size: 50px;
       color: $white;
     }
   }
   #ans {
     display: flex;
-    overflow-x: scroll;
+    flex-flow: row wrap;
     p {
       scroll-snap-align: center;
       color: $white;
@@ -196,11 +197,23 @@ article {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 20px;
-      font-size: 25px;
+      margin: 10px 20px 10px 20px;
+      border-radius: 13px;
+      margin: 6px 4px 2px 6px;
+      padding: 5px 10px 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 300ms all cubic-bezier(0.165, 0.84, 0.44, 1);
+      font-family: $pontano;
       span {
         font-size: 40px;
         color: $white;
+      }
+
+      &:hover, &:focus-within {
+        box-shadow:  6px 6px 27px $warning, 
+                   -6px -6px 27px $white;
+        transform: scale(1.1);
       }
     }
   }
