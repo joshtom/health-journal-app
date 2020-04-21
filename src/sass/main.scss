@@ -189,7 +189,7 @@ article {
   #ans {
     display: flex;
     overflow-x: scroll;
-    section {
+    p {
       scroll-snap-align: center;
       color: $white;
       display: flex;

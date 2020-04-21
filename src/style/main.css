@@ -144,7 +144,7 @@ article {
   #howdy #ans {
     display: flex;
     overflow-x: scroll; }
-    #howdy #ans section {
+    #howdy #ans p {
       scroll-snap-align: center;
       color: #fdfdfc;
       display: flex;
@@ -152,7 +152,7 @@ article {
       justify-content: center;
       align-items: center;
       margin: 20px; }
-      #howdy #ans section span {
+      #howdy #ans p span {
         font-size: 35px; }
 
 /*# sourceMappingURL=main.css.map */
