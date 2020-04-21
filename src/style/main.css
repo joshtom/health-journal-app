@@ -9,13 +9,6 @@
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
-body {
-  overflow: hidden;
-  -webkit-overflow: hidden;
-  -o-overflow: hidden;
-  -ms-overflow: hidden;
-  -moz-overflow: hidden; }
-
 :root {
   font-size: 12px;
   letter-spacing: 0.03em; }
@@ -71,7 +64,7 @@ article {
       font-variant: unset;
       font-kerning: normal; }
 
-#homepage {
+#homepage #landing {
   height: 100vh;
   width: 100vw;
   background: #fdfdfc;
@@ -85,19 +78,19 @@ article {
   background-attachment: fixed;
   background-size: cover; }
   @media screen and (max-width: 500px) {
-    #homepage {
+    #homepage #landing {
       flex-flow: row-reverse wrap-reverse; } }
-  #homepage section#left h1 {
+  #homepage #landing section#left h1 {
     font-size: 4rem; }
     @media screen and (max-width: 500px) {
-      #homepage section#left h1 {
+      #homepage #landing section#left h1 {
         font-size: 3rem;
         margin-top: -200px;
         -moz-margin-top: -200px;
         -ms-margin-top: -200px;
         -webkit-margin-top: -200px;
         -o-margin-top: -200px; } }
-  #homepage section#left article {
+  #homepage #landing section#left article {
     font-size: 1.3rem;
     letter-spacing: 1px;
     line-height: 1.4;
@@ -105,9 +98,9 @@ article {
     margin-bottom: 20px;
     color: #4e4e4ec7; }
     @media screen and (max-width: 500px) {
-      #homepage section#left article {
+      #homepage #landing section#left article {
         width: 100%; } }
-  #homepage section#left button#getStarted {
+  #homepage #landing section#left button#getStarted {
     height: 50px;
     width: 50%;
     transition: all 350ms ease-in-out;
@@ -116,25 +109,30 @@ article {
     border-radius: 3px;
     border: none;
     cursor: pointer; }
-    #homepage section#left button#getStarted:hover, #homepage section#left button#getStarted:focus-within {
+    #homepage #landing section#left button#getStarted:hover, #homepage #landing section#left button#getStarted:focus-within {
       background: #1229d3;
       color: #fdfdfc; }
     @media screen and (max-width: 500px) {
-      #homepage section#left button#getStarted {
+      #homepage #landing section#left button#getStarted {
         width: 100%; } }
-  #homepage section#right {
+  #homepage #landing section#right {
     display: none; }
     @media screen and (max-width: 500px) {
-      #homepage section#right {
+      #homepage #landing section#right {
         display: block; } }
-  #homepage svg {
+  #homepage #landing svg {
     width: 100%;
     height: 200px;
     margin: auto; }
-  #homepage #doc {
+  #homepage #landing #doc {
     fill: #429e79;
     stroke: #1229d3; }
-  #homepage #tors {
+  #homepage #landing #tors {
     fill: #e5f77e; }
+
+#howdy #ans {
+  scroll-snap-type: x mandatory; }
+  #howdy #ans section {
+    scroll-snap-align: center; }
 
 /*# sourceMappingURL=main.css.map */

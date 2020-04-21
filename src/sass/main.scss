@@ -23,11 +23,11 @@ $pontano: 'Pontano Sans', sans-serif;
     -moz-box-sizing: border-box;
  }
  body {
-   overflow: hidden;
-   -webkit-overflow: hidden;
-   -o-overflow: hidden;
-   -ms-overflow: hidden;
-   -moz-overflow: hidden;
+  //  overflow: hidden;
+  //  -webkit-overflow: hidden;
+  //  -o-overflow: hidden;
+  //  -ms-overflow: hidden;
+  //  -moz-overflow: hidden;
  }
 $min_width: 400;
 $max_width: 800;
@@ -90,6 +90,7 @@ article {
 
 }
 #homepage {
+  #landing {
   height: 100vh;
   width: 100vw;
   background: $white;
@@ -157,20 +158,6 @@ article {
     }
   }
 
-  // section#diagonal {
-  //   background: $warning-light;
-  //   width: 500px;
-  //   height: 200px;
-  //   clip-path: polygon(0 100%, 100% 28%, 100% 100%, 0 100%);
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   display: none;
-  //   @media screen and (max-width: 400px){
-  //     display: block;
-  //   }
-  // }
-
   // Filling the svg with colors
   svg {
     width: 100%;
@@ -183,5 +170,17 @@ article {
   }
   #tors {
     fill: $info;
+  }}
+}
+#howdy {
+  #que {
+    
+  }
+  #ans {
+    scroll-snap-type: x mandatory;
+
+    section {
+      scroll-snap-align: center;
+    }
   }
 }
