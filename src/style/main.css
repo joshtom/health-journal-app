@@ -29,10 +29,10 @@ h1, h2, h3, h5, h5, h6 {
   font-family: "Fira Sans Extra Condensed", sans-serif; }
 
 p {
-  font-family: "Lovers Quarrel", cursive; }
+  font-family: "Pontano Sans", sans-serif; }
 
 article {
-  font-family: "Pontano Sans", sans-serif; }
+  font-family: "Lovers Quarrel", cursive; }
 
 #notify {
   position: fixed;
@@ -151,9 +151,10 @@ article {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 20px; }
+      margin: 20px;
+      font-size: 25px; }
       #howdy #ans p span {
-        font-size: 35px;
+        font-size: 40px;
         color: #fdfdfc; }
 
 /*# sourceMappingURL=main.css.map */

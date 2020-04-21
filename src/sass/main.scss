@@ -47,10 +47,10 @@ h1, h2, h3, h5, h5, h6 {
   font-family: $fira;
 }
 p {
-  font-family: $lover;
+  font-family: $pontano;
 }
 article {
-  font-family: $pontano;
+  font-family: $lover;
 }
 #notify {
   position: fixed;
@@ -197,8 +197,9 @@ article {
       justify-content: center;
       align-items: center;
       margin: 20px;
+      font-size: 25px;
       span {
-        font-size: 35px;
+        font-size: 40px;
         color: $white;
       }
     }
