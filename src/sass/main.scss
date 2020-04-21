@@ -23,11 +23,11 @@ $pontano: 'Pontano Sans', sans-serif;
     -moz-box-sizing: border-box;
  }
  body {
-   overflow-x: hidden;
-   -webkit-overflow-x: hidden;
-   -o-overflow-x: hidden;
-   -ms-overflow-x: hidden;
-   -moz-overflow-x: hidden;
+   overflow: hidden;
+   -webkit-overflow: hidden;
+   -o-overflow: hidden;
+   -ms-overflow: hidden;
+   -moz-overflow: hidden;
  }
 $min_width: 400;
 $max_width: 800;
