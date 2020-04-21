@@ -39,7 +39,8 @@
   // Animating text on landing page
 
   var tl = gsap.timeline(),
-  bell = gsap.timeline();
+  bell = gsap.timeline(),
+  btn = document.querySelector("button#getStarted");
 
 tl.from("#doc", {duration: .6, x: 1000, ease: "power", opacity: 0})
 
@@ -73,5 +74,10 @@ bell.to(".circle",
      scale: '1', 
      ease: "bounce.in",
     })
+
+// Listening for click event
+btn.addEventListener('click', () => {
+  alert('Yay, working');
+})
  
 
