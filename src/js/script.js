@@ -36,11 +36,23 @@
     });
   }
 
+  // Listening for click event
+const _element = ($param) => { return document.querySelector($param) }
+const _value = () => { return _element.value }
+const pgTransition = gsap.timeline();
+const start = () => {
+  _element("#getStarted").addEventListener('click', () => {
+    pgTransition.to("#homepage", {opacity: 0, display: 'none'})
+      .from("#howdy", { display: 'flex', ease: 'bounce.in' })
+  })  
+}
   // Animating text on landing page
 
   var tl = gsap.timeline(),
-  bell = gsap.timeline(),
-  btn = document.querySelector("button#getStarted");
+  bell = gsap.timeline();
+
+
+  
 
 tl.from("#doc", {duration: .6, x: 1000, ease: "power", opacity: 0})
 
@@ -75,9 +87,5 @@ bell.to(".circle",
      ease: "bounce.in",
     })
 
-// Listening for click event
-btn.addEventListener('click', () => {
-  alert('Yay, working');
-})
- 
+
 
