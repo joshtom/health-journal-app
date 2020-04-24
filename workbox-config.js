@@ -18,6 +18,7 @@ module.exports = {
     "index.html",
     "manifest.webmanifest",
     "images/*.png",
+    "images/*.svg",
     "pages/offline.html"
     // "images/.svg",
   ],
