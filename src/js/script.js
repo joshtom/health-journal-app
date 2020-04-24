@@ -48,11 +48,23 @@ const _value = () => { return _element.value }
   nav = gsap.timeline(),
   pgTransition = gsap.timeline();
 
-
+  function bellCall() {
+    return bell.to("#bell",
+      {duration: 0.15, 
+       x: 10, 
+       fill: '#1229d3'})
+  .to("#bell", 
+      { duration: 1, 
+       ease: "elastic.out(1, 0.3)", 
+       x: 0, 
+       fill: 'black'})
+.repeat(-1)
+.repeatDelay(10)
+  }
   _element("#getStarted").addEventListener('click', () => {
     pgTransition.to("#homepage", {duration: 1, x: '-100%', display: 'none', ease: 'power'})
       .from("#howdy", { duration: 1, y: '100%', display: 'flex', ease: 'bounce.in' })
-    bell.to("#bell", {fill: '#fff'});
+      bellCall();
   })   
 
 tl.from("#doc", {duration: .6, x: 1000, ease: "power", opacity: 0})
@@ -65,17 +77,7 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
 
 
 // Animate the notification icon
-bell.to("#bell",
-      {duration: 0.15, 
-       x: 10, 
-       fill: '#1229d3'})
-  .to("#bell", 
-      { duration: 1, 
-       ease: "elastic.out(1, 0.3)", 
-       x: 0, 
-       fill: 'black'})
-.repeat(-1)
-.repeatDelay(10)
+bellCall()
 
 bell.to(".circle", 
       {duration: 0.2, 
