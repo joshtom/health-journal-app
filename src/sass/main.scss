@@ -23,11 +23,11 @@ $pontano: 'Pontano Sans', sans-serif;
     -moz-box-sizing: border-box;
  }
  body {
-  //  overflow: hidden;
-  //  -webkit-overflow: hidden;
-  //  -o-overflow: hidden;
-  //  -ms-overflow: hidden;
-  //  -moz-overflow: hidden;
+   overflow: hidden;
+   -webkit-overflow: hidden;
+   -o-overflow: hidden;
+   -ms-overflow: hidden;
+   -moz-overflow: hidden;
  }
 $min_width: 400;
 $max_width: 800;
@@ -58,6 +58,7 @@ article {
   right: 20px;
   width: auto;
   height: auto;
+  z-index: 100;
   svg {
     width: 100%;
      

@@ -40,12 +40,11 @@
 const _element = ($param) => { return document.querySelector($param) }
 const _value = () => { return _element.value }
 const pgTransition = gsap.timeline();
-const start = () => {
+
   _element("#getStarted").addEventListener('click', () => {
-    pgTransition.to("#homepage", {opacity: 0, display: 'none'})
-      .from("#howdy", { display: 'flex', ease: 'bounce.in' })
+    pgTransition.to("#homepage", {duration: 1, x: '-100%', display: 'none', ease: 'power'})
+      .from("#howdy", { duration: 1, y: '100%', display: 'flex', zIndex: '-10', ease: 'bounce.in' })
   })  
-}
   // Animating text on landing page
 
   var tl = gsap.timeline(),

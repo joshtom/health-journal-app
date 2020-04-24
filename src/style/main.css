@@ -9,6 +9,13 @@
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
+body {
+  overflow: hidden;
+  -webkit-overflow: hidden;
+  -o-overflow: hidden;
+  -ms-overflow: hidden;
+  -moz-overflow: hidden; }
+
 :root {
   font-size: 12px;
   letter-spacing: 0.03em; }
@@ -39,7 +46,8 @@ article {
   top: 10px;
   right: 20px;
   width: auto;
-  height: auto; }
+  height: auto;
+  z-index: 100; }
   #notify svg {
     width: 100%; }
   #notify #bell {
