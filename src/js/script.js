@@ -47,6 +47,7 @@ const _value = () => { return _element.value }
   bell = gsap.timeline(),
   nav = gsap.timeline(),
   pgTransition = gsap.timeline(),
+  slideTransition = gsap.timeline(),
   section = 1;
 
   function bellCall(cFrom = '#fff', cTo = '#fff') { //Setting default parameters to white
@@ -74,7 +75,9 @@ const _value = () => { return _element.value }
   _element(".next").addEventListener('click', () => {
     if(section < 6) {
       section ++;
-      gsap.from(`.slide${section}`, { duration: 1, y: '100%', ease: 'back.out(1.7)' })
+      gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
+      // slideTransition.to(`#slide${parseInt(section - section)}`, {duration: 1, x: '-100%', display: 'none', ease: 'power'})
+      // slideTransition.from(`#slide${section}`, { duration: 1, y: '100%', ease: 'back.out(1.7)' })
     }
     
   })
@@ -82,7 +85,8 @@ const _value = () => { return _element.value }
   _element(".previous").addEventListener('click', () => {
     if(section > 1) {
       section --;
-      gsap.from(`.slide${section}`, { duration: 1, y: '-s100%', ease: 'back.out(1.7)' })
+      // slideTransition.from(`#slide${section}`, { duration: 1, y: '-s100%', ease: 'back.out(1.7)' })
+      gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
     }
   })
 
