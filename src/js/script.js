@@ -48,16 +48,16 @@ const _value = () => { return _element.value }
   nav = gsap.timeline(),
   pgTransition = gsap.timeline();
 
-  function bellCall() {
+  function bellCall(cFrom = '#fff', cTo = '#fff') { //Setting default parameters to white
     return bell.to("#bell",
       {duration: 0.15, 
        x: 10, 
-       fill: '#1229d3'})
+       fill: cFrom})
   .to("#bell", 
       { duration: 1, 
        ease: "elastic.out(1, 0.3)", 
        x: 0, 
-       fill: 'black'})
+       fill: cTo})
 .repeat(-1)
 .repeatDelay(10)
   }
@@ -77,7 +77,7 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
 
 
 // Animate the notification icon
-bellCall()
+bellCall('#1229d3', '#000000')
 
 bell.to(".circle", 
       {duration: 0.2, 
