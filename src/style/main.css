@@ -106,12 +106,12 @@ article {
     width: 50%;
     transition: all 350ms ease-in-out;
     background: rgba(128, 142, 255, 0.51);
-    color: #1229d3;
+    color: #850a16;
     border-radius: 3px;
     border: none;
     cursor: pointer; }
     #homepage #landing section#left button#getStarted:hover, #homepage #landing section#left button#getStarted:focus-within {
-      background: #1229d3;
+      background: #850a16;
       color: #fdfdfc; }
     @media screen and (max-width: 500px) {
       #homepage #landing section#left button#getStarted {
@@ -127,7 +127,7 @@ article {
     margin: auto; }
   #homepage #landing #doc {
     fill: #429e79;
-    stroke: #1229d3; }
+    stroke: #850a16; }
   #homepage #landing #tors {
     fill: #e5f77e; }
 
@@ -180,10 +180,10 @@ article {
   background-color: #429e79; }
 
 .s4 {
-  background-color: #434242; }
+  background-color: #675b37; }
 
 .s5 {
-  background-color: #1229d3; }
+  background-color: #850a16; }
 
 .s6 {
   background-color: #2e2a29; }

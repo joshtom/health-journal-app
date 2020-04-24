@@ -20,7 +20,6 @@ module.exports = {
     "images/*.png",
     "images/*.svg",
     "pages/offline.html"
-    // "images/.svg",
   ],
   "swSrc": "src/sw.js",
   "swDest": "build/sw.js",

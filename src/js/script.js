@@ -79,17 +79,6 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
 // Animate the notification icon
 bellCall('#1229d3', '#000000')
 
-bell.to(".circle", 
-      {duration: 0.2, 
-       scale:'1.2',
-       ease: "bounce.out",
-      })
-.to(".circle", 
-    {duration: 0.2, 
-     scale: '1', 
-     ease: "bounce.in",
-    });
-
     // Animate the nav Icon at the bottom
     nav.to("nav .previous", { 
       duration: 1,
