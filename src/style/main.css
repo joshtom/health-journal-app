@@ -76,7 +76,7 @@ article {
       font-kerning: normal; }
 
 #homepage #landing {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: #fdfdfc;
   color: black;
@@ -201,6 +201,7 @@ article {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       margin: 10px 20px 10px 20px;
       border-radius: 13px;
       margin: 6px 4px 2px 6px;
@@ -217,15 +218,19 @@ article {
         transform: scale(1.1); }
 
 .s2 {
-  background: url("../images/slide2.svg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/slide2.svg") no-repeat;
   background-size: cover; }
+  .s2 p {
+    text-align: center; }
 
 .s3 {
-  background: url("../images/slide3.svg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/slide3.svg") no-repeat;
   background-size: cover; }
+  .s3 p {
+    text-align: center; }
 
 .s4 {
-  background: url("../images/slide4.svg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/slide4.svg") no-repeat;
   background-size: cover; }
   .s4 textarea {
     width: 50%;
@@ -253,13 +258,13 @@ article {
         width: 90%; } }
 
 .s5 {
-  background: url("../images/slide5.svg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/slide5.svg") no-repeat;
   background-size: cover; }
   .s5 p {
     text-align: center; }
 
 .s6 {
-  background: url("../images/slide6.svg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/slide6.svg") no-repeat;
   background-size: cover; }
   .s6 article {
     font-size: 20px;

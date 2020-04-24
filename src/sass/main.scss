@@ -96,7 +96,7 @@ article {
 }
 #homepage {
   #landing {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: $white;
   color: $dark;
@@ -251,6 +251,7 @@ article {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       margin: 10px 20px 10px 20px;
       border-radius: 13px;
       margin: 6px 4px 2px 6px;
@@ -274,15 +275,21 @@ article {
 }
 
 .s2 {
-  background: url('../images/slide2.svg') no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('../images/slide2.svg') no-repeat;
   background-size: cover;
+  p {
+    text-align: center;
+  }
 }
 .s3 {
-  background: url('../images/slide3.svg') no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('../images/slide3.svg') no-repeat;
   background-size: cover;
+  p {
+    text-align: center;
+  }
 }
 .s4 {
-  background: url('../images/slide4.svg') no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('../images/slide4.svg') no-repeat;
   background-size: cover;
 
   textarea {
@@ -315,7 +322,7 @@ article {
     }
 }
 .s5 {
-  background: url('../images/slide5.svg') no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('../images/slide5.svg') no-repeat;
   background-size: cover;
 
   p {
@@ -323,7 +330,7 @@ article {
   }
 }
 .s6 {
-  background: url('../images/slide6.svg') no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('../images/slide6.svg') no-repeat;
   background-size: cover;
 
   article {
