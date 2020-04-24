@@ -86,6 +86,33 @@ if(workbox) {
           ]
         })
       );
+
+      // Cache Jquery CDN
+      workbox.routing.registerRoute(
+        new RegExp('^https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'),
+        new workbox.strategies.CacheFirst({
+          cacheName: 'image-cache',
+          plugins: [
+            new workbox.cacheableResponse.CacheableResponse({
+              statuses: [0, 200],
+            })
+          ]
+        })
+      );
+      
+      // Cache scrollToPluginCDN
+      workbox.routing.registerRoute(
+        new RegExp('^https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/ScrollToPlugin.min.js'),
+        new workbox.strategies.CacheFirst({
+          cacheName: 'image-cache',
+          plugins: [
+            new workbox.cacheableResponse.CacheableResponse({
+              statuses: [0, 200],
+            })
+          ]
+        })
+      );
+      
       
 } else {
     console.log('Workbox didnt load correctly');

@@ -76,8 +76,6 @@ const _value = () => { return _element.value }
     if(section < 6) {
       section ++;
       gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
-      // slideTransition.to(`#slide${parseInt(section - section)}`, {duration: 1, x: '-100%', display: 'none', ease: 'power'})
-      // slideTransition.from(`#slide${section}`, { duration: 1, y: '100%', ease: 'back.out(1.7)' })
     }
     
   })
@@ -85,7 +83,6 @@ const _value = () => { return _element.value }
   _element(".previous").addEventListener('click', () => {
     if(section > 1) {
       section --;
-      // slideTransition.from(`#slide${section}`, { duration: 1, y: '-s100%', ease: 'back.out(1.7)' })
       gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
     }
   })
