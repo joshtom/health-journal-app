@@ -63,8 +63,8 @@ const _value = () => { return _element.value }
   }
   _element("#getStarted").addEventListener('click', () => {
     pgTransition.to("#homepage", {duration: 1, x: '-100%', display: 'none', ease: 'power'})
-      .from("#howdy", { duration: 1, y: '100%', display: 'flex', ease: 'bounce.in' })
-      bellCall();
+      .from("#howdy", { duration: 1, y: '100%', display: 'flex', ease: 'back.out(1.7)' })
+      bellCall('#fff', '#fff');
   })   
 
 tl.from("#doc", {duration: .6, x: 1000, ease: "power", opacity: 0})
