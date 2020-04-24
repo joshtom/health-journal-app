@@ -46,7 +46,8 @@ const _value = () => { return _element.value }
   var tl = gsap.timeline(),
   bell = gsap.timeline(),
   nav = gsap.timeline(),
-  pgTransition = gsap.timeline();
+  pgTransition = gsap.timeline(),
+  section = 1;
 
   function bellCall(cFrom = '#fff', cTo = '#fff') { //Setting default parameters to white
     return bell.to("#bell",
@@ -61,11 +62,29 @@ const _value = () => { return _element.value }
 .repeat(-1)
 .repeatDelay(10)
   }
+
+  // Get started event listener
   _element("#getStarted").addEventListener('click', () => {
     pgTransition.to("#homepage", {duration: 1, x: '-100%', display: 'none', ease: 'power'})
       .from("#howdy", { duration: 1, y: '100%', display: 'flex', ease: 'back.out(1.7)' })
       bellCall('#fff', '#fff');
   })   
+
+  // Logic for next and previous button
+  _element(".next").addEventListener('click', () => {
+    if(section < 6) {
+      section ++;
+      gsap.to(window, 0.5, {scrollTo:{y:_element(".slide" + section).offset().top}});
+    }
+    
+  })
+
+  _element(".previous").addEventListener('click', () => {
+    if(section > 1) {
+      section --;
+      gsap.to(window, 0.5, {scrollTo:{y:_element(".slide" + section).offset().top}});
+    }
+  })
 
 tl.from("#doc", {duration: .6, x: 1000, ease: "power", opacity: 0})
 
