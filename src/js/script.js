@@ -39,20 +39,21 @@
   // Listening for click event
 const _element = ($param) => { return document.querySelector($param) }
 const _value = () => { return _element.value }
-const pgTransition = gsap.timeline();
 
-  _element("#getStarted").addEventListener('click', () => {
-    pgTransition.to("#homepage", {duration: 1, x: '-100%', display: 'none', ease: 'power'})
-      .from("#howdy", { duration: 1, y: '100%', display: 'flex', zIndex: '-10', ease: 'bounce.in' })
-  })  
+  
   // Animating text on landing page
 
   var tl = gsap.timeline(),
   bell = gsap.timeline(),
-  nav = gsap.timeline()
+  nav = gsap.timeline(),
+  pgTransition = gsap.timeline();
 
 
-  
+  _element("#getStarted").addEventListener('click', () => {
+    pgTransition.to("#homepage", {duration: 1, x: '-100%', display: 'none', ease: 'power'})
+      .from("#howdy", { duration: 1, y: '100%', display: 'flex', ease: 'bounce.in' })
+    bell.to("#bell", {fill: '#fff'});
+  })   
 
 tl.from("#doc", {duration: .6, x: 1000, ease: "power", opacity: 0})
 
