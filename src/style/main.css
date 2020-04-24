@@ -217,15 +217,15 @@ article {
         transform: scale(1.1); }
 
 .s2 {
-  background: url("../images/slide2.svg") no-repeat center center;
+  background: url("../images/slide2.svg") no-repeat;
   background-size: cover; }
 
 .s3 {
-  background: url("../images/slide3.svg") no-repeat center center;
+  background: url("../images/slide3.svg") no-repeat;
   background-size: cover; }
 
 .s4 {
-  background: url("../images/slide4.svg") no-repeat center center;
+  background: url("../images/slide4.svg") no-repeat;
   background-size: cover; }
   .s4 textarea {
     width: 50%;
@@ -247,14 +247,13 @@ article {
     cursor: pointer; }
     .s4 button#tellUs:hover, .s4 button#tellUs:focus-within {
       color: #fdfdfc;
-      font-weight: 900;
-      border-radius: 5px; }
+      background: #e0a557; }
     @media screen and (max-width: 500px) {
       .s4 button#tellUs {
         width: 90%; } }
 
 .s5 {
-  background: url("../images/slide5.svg") no-repeat center center;
+  background: url("../images/slide5.svg") no-repeat;
   background-size: cover; }
   .s5 p {
     text-align: center; }
@@ -277,6 +276,7 @@ nav {
   nav i.fa {
     color: #fff;
     font-size: 30px;
-    cursor: pointer; }
+    cursor: pointer;
+    padding: 6px; }
 
 /*# sourceMappingURL=main.css.map */
