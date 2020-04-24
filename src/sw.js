@@ -73,6 +73,19 @@ if(workbox) {
           ]
         })
       );
+
+      // Cache fontawesome cdn
+      workbox.routing.registerRoute(
+        new RegExp('^https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'),
+        new workbox.strategies.CacheFirst({
+          cacheName: 'image-cache',
+          plugins: [
+            new workbox.cacheableResponse.CacheableResponse({
+              statuses: [0, 200],
+            })
+          ]
+        })
+      );
       
 } else {
     console.log('Workbox didnt load correctly');

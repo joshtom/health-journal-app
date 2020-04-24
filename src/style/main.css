@@ -135,7 +135,7 @@ article {
   height: 100vh;
   background: url("../images/howdy.svg") no-repeat center center;
   background-size: cover;
-  display: none;
+  display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
