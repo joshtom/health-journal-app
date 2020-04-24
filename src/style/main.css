@@ -181,19 +181,24 @@ article {
   height: 100vh; }
 
 .s2 {
-  background-color: #e0a557; }
+  background: url("../images/slide2.svg") no-repeat center center;
+  background-size: cover; }
 
 .s3 {
-  background-color: #429e79; }
+  background: url("../images/slide3.svg") no-repeat center center;
+  background-size: cover; }
 
 .s4 {
-  background-color: #675b37; }
+  background: url("../images/slide4.svg") no-repeat center center;
+  background-size: cover; }
 
 .s5 {
-  background-color: #850a16; }
+  background: url("../images/slide5.svg") no-repeat center center;
+  background-size: cover; }
 
 .s6 {
-  background-color: #2e2a29; }
+  background: url("../images/slide6.svg") no-repeat center center;
+  background-size: cover; }
 
 nav {
   display: grid;

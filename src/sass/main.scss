@@ -228,19 +228,24 @@ article {
 }
 
 .s2 {
-  background-color: $warning;
+  background: url('../images/slide2.svg') no-repeat center center;
+  background-size: cover;
 }
 .s3 {
-  background-color: $secondary;
+  background: url('../images/slide3.svg') no-repeat center center;
+  background-size: cover;
 }
 .s4 {
-  background-color: $warning-light;
+  background: url('../images/slide4.svg') no-repeat center center;
+  background-size: cover;
 }
 .s5 {
-  background-color: $primary-dark;
+  background: url('../images/slide5.svg') no-repeat center center;
+  background-size: cover;
 }
 .s6 {
-  background-color: $dark-skin;
+  background: url('../images/slide6.svg') no-repeat center center;
+  background-size: cover;
 }
 
 
