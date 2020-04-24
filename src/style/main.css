@@ -168,4 +168,17 @@ article {
         box-shadow: 0px 0px 0px 0px #e0a557,  -2px -2px 20px 0px #fdfdfc;
         transform: scale(1.1); }
 
+nav {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: repeat(2, 1fr);
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-weight: bold; }
+  nav i.fa {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer; }
+
 /*# sourceMappingURL=main.css.map */

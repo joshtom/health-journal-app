@@ -219,3 +219,19 @@ article {
     }
   }
 }
+
+// Style for the navigation between pages
+nav {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: repeat(2, 1fr);
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-weight: bold;
+  i.fa {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}

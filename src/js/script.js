@@ -49,7 +49,8 @@ const start = () => {
   // Animating text on landing page
 
   var tl = gsap.timeline(),
-  bell = gsap.timeline();
+  bell = gsap.timeline(),
+  nav = gsap.timeline()
 
 
   
@@ -85,7 +86,26 @@ bell.to(".circle",
     {duration: 0.2, 
      scale: '1', 
      ease: "bounce.in",
-    })
+    });
+
+    // Animate the nav Icon at the bottom
+    nav.to("nav .previous", { 
+      duration: 1,
+      x: -10,
+      ease: "elastic.in(1, 0.3)"
+     }).to("nav .previous",{
+       x: 0,
+       ease: "elastic.out(1, 0.3)"
+     }).repeat(-1).repeatDelay(2)
+
+    nav.to("nav .next", { 
+      duration: 1,
+      x: 10,
+      ease: "elastic.in(1, 0.3)"
+     }).to("nav .next",{
+       x: 0,
+       ease: "elastic.out(1, 0.3)"
+     }).repeat(-1).repeatDelay(2)
 
 
 
