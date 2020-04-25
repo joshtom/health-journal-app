@@ -269,6 +269,10 @@ article {
   .s6 article {
     font-size: 20px;
     text-align: center; }
+  .s6 .share {
+    background: #ff0000;
+    width: 300px;
+    height: 300px; }
 
 nav {
   display: grid;
