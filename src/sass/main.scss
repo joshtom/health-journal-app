@@ -340,8 +340,14 @@ article {
 
   .share {
     background: #ff0000;
-    width: 300px;
-    height: 300px;
+    width: auto;
+    height: auto;
+
+    button {
+      padding: 10px;
+      background: $primary;
+      border: none;
+    }
   }
 }
 

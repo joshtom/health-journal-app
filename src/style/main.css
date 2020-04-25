@@ -271,8 +271,12 @@ article {
     text-align: center; }
   .s6 .share {
     background: #ff0000;
-    width: 300px;
-    height: 300px; }
+    width: auto;
+    height: auto; }
+    .s6 .share button {
+      padding: 10px;
+      background: #31021e;
+      border: none; }
 
 nav {
   display: grid;
