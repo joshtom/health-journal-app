@@ -73,18 +73,22 @@ const _value = () => { return _element.value }
   })   
 
   // Logic for next and previous button
+
+  // Next Button
   _element(".next").addEventListener('click', () => {
     if(section < 6) {
       section ++;
       gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
+      console.log($(`#slide${section}`))
     }
     
   })
-
+  // Previous Button
   _element(".previous").addEventListener('click', () => {
     if(section > 1) {
       section --;
       gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
+      console.log($(`#slide${section}`))
     }
   });
 
