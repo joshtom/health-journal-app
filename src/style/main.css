@@ -277,8 +277,13 @@ article {
       padding: 15px;
       background: #090808;
       border: none;
-      box-shadow: 0px 1px 8px 3px red; }
-    .s6 .share i.fa-whatsapp, .s6 .share .fa-google {
+      box-shadow: 0px 1px 7px 0px #fdfdfc;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 5px; }
+    .s6 .share #or {
+      font-family: "Pontano Sans", sans-serif; }
+    .s6 .share i.fa-whatsapp, .s6 .share .fa-google, .s6 .share #or {
       color: #fdfdfc;
       margin-left: 10px;
       font-size: 20px;

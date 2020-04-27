@@ -89,9 +89,24 @@ const _value = () => { return _element.value }
   });
 
   // Set opacity to 1 when share button is clicked
+  const whatsappIcon = _element(".fa-whatsapp");
+  const googleIcon = _element(".fa-google");
+
   _element("#share").addEventListener('click', () => {
-    btnTransition.to(".fa-whatsapp", { duration: .5, opacity: 1, ease: 'power' })
-                  .to(".fa-google", { duration: .5, opacity: 1, ease: 'power' })
+    if (!whatsappIcon.classList.contains("active") || !googleIcon.classList.contains("active")) {    
+      btnTransition.to(".fa-whatsapp", 0.5, { opacity: 1, ease: "elastic.out(1, 0.3)" })
+                  .to("#or", 0.5, { opacity: 1, ease: "elastic.out(1, 0.3)" })
+                  .to(".fa-google", 0.5, { opacity: 1, ease: "elastic.out(1, 0.3)" });
+      whatsappIcon.classList.add("active");
+      googleIcon.classList.add("active");
+    } else {
+      btnTransition.to(".fa-whatsapp", 0.5, { opacity: 0, ease: "elastic.out(1, 0.3)" })
+                    .to("#or", 0.5, { opacity: 0, ease: "elastic.out(1, 0.3)" })
+                    .to(".fa-google", 0.5, { opacity: 0, ease: "elastic.out(1, 0.3)" })
+      whatsappIcon.classList.remove("active");
+      googleIcon.classList.remove("active");
+    }
+                    
   })
 
 tl.from("#doc", {duration: .6, x: 1000, ease: "power", opacity: 0})
