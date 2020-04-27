@@ -38,6 +38,7 @@
 
   // Listening for click event
 const _element = ($param) => { return document.querySelector($param) }
+const _getRadioVal = ($param) => { return document.getElementsByName($param) }
 const _value = () => { return _element.value }
 
   
@@ -78,8 +79,7 @@ const _value = () => { return _element.value }
   _element(".next").addEventListener('click', () => {
     if(section < 6) {
       section ++;
-      slideTransition.to(`#slide${section - 1}`, { duration: 1, x: '-100%', display: 'none', ease: 'power' })
-      .from(`#slide${section}`, { duration: 1, y: '100%', display: 'block', ease: 'back.out(1.7)' });
+      gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
     }
     
   })
@@ -87,8 +87,7 @@ const _value = () => { return _element.value }
   _element(".previous").addEventListener('click', () => {
     if(section > 1) {
       section --;
-      gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
-      console.log($(`#slide${section}`))
+      gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});      
     }
   });
 
@@ -145,5 +144,9 @@ bellCall('#1229d3', '#000000')
        ease: "elastic.out(1, 0.3)"
      }).repeat(-1).repeatDelay(2)
 
+// Submitting the emojis to localstorage and animating;
 
+_getRadioVal("howdy").addEventListener('click', () => {
+  console.log(this);
 
+})
