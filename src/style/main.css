@@ -44,6 +44,12 @@ article {
 .text-white {
   color: #fdfdfc; }
 
+input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
 #notify {
   position: fixed;
   top: 10px;
