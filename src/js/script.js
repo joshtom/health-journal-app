@@ -146,7 +146,58 @@ bellCall('#1229d3', '#000000')
 
 // Submitting the emojis to localstorage and animating;
 
-_getRadioVal("howdy").addEventListener('click', () => {
-  console.log(this);
+  //  let howdy = _element("input[name='howdy']:checked").value;
+    const howdyLabel = document.querySelectorAll(".howdy #ans label");
+    const slide2Label = document.querySelectorAll("#slide2 #ans label");
+    const slide3Label = document.querySelectorAll("#slide3 #ans label");
+    const tellUs = document.querySelector("#tellUs");
+    const slide5Label = document.querySelectorAll("#slide5 #ans label");
 
-})
+    for(var i = 0; i < howdyLabel.length; i++) {
+      howdyLabel[i].addEventListener('click', () => {
+        setTimeout(() => {
+          gsap.to(window, 0.5, {scrollTo:{y:$("#slide2").offset().top}});
+        }, 1000);  
+      })
+    }
+
+    for(var i = 0; i < slide2Label.length; i++) {
+      slide2Label[i].addEventListener('click', () => {
+        setTimeout(() => {
+          gsap.to(window, 0.5, {scrollTo:{y:$("#slide3").offset().top}});
+        }, 1000);  
+      })
+    }
+
+    for(var i = 0; i < slide3Label.length; i++) {
+      if(slide3Label[i].htmlFor === 'yes'){
+        slide3Label[i].addEventListener('click', () => {
+        setTimeout(() => {
+          gsap.to(window, 0.5, {scrollTo:{y:$("#slide4").offset().top}});
+        }, 1000);  
+      })
+      } else {
+         slide3Label[i].addEventListener('click', () => {
+        setTimeout(() => {
+          gsap.to(window, 0.5, {scrollTo:{y:$("#slide5").offset().top}});
+        }, 1000);  
+      })
+      }
+     
+    }
+
+    tellUs.addEventListener('click', () => {
+      setTimeout(() => {
+          gsap.to(window, 0.5, {scrollTo:{y:$("#slide6").offset().top}});
+        }, 1000);  
+      })
+    })
+
+    for(var i = 0; i < slide5Label.length; i++) {
+      slide5Label[i].addEventListener('click', () => {
+        setTimeout(() => {
+          gsap.to(window, 0.5, {scrollTo:{y:$("#slide6").offset().top}});
+        }, 1000);  
+      })
+    }
+    
