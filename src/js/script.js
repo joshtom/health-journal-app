@@ -48,6 +48,7 @@ const _value = () => { return _element.value }
   nav = gsap.timeline(),
   pgTransition = gsap.timeline(),
   slideTransition = gsap.timeline(),
+  btnTransition = gsap.timeline(),
   section = 1;
 
   function bellCall(cFrom = '#fff', cTo = '#fff') { //Setting default parameters to white
@@ -85,6 +86,12 @@ const _value = () => { return _element.value }
       section --;
       gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
     }
+  });
+
+  // Set opacity to 1 when share button is clicked
+  _element("#share").addEventListener('click', () => {
+    btnTransition.to(".fa-whatsapp", { duration: .5, opacity: 1, ease: 'power' })
+                  .to(".fa-google", { duration: .5, opacity: 1, ease: 'power' })
   })
 
 tl.from("#doc", {duration: .6, x: 1000, ease: "power", opacity: 0})
@@ -94,6 +101,7 @@ tl.from("h1#heading", {duration: .6, x: 1000, ease: "power", opacity: 0})
 tl.from("#quote", {duration: .6, x: 1000, ease: "power", opacity: 0})
 
 tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)", opacity: 0})
+
 
 
 // Animate the notification icon
