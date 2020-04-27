@@ -78,8 +78,8 @@ const _value = () => { return _element.value }
   _element(".next").addEventListener('click', () => {
     if(section < 6) {
       section ++;
-      gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
-      console.log($(`#slide${section}`))
+      slideTransition.to(`#slide${section - 1}`, { duration: 1, x: '-100%', display: 'none', ease: 'power' })
+      .from(`#slide${section}`, { duration: 1, y: '100%', display: 'block', ease: 'back.out(1.7)' });
     }
     
   })
