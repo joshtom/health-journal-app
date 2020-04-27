@@ -339,14 +339,30 @@ article {
   }
 
   .share {
-    background: #ff0000;
     width: auto;
     height: auto;
-
+    justify-content: space-between;
     button {
-      padding: 10px;
-      background: $primary;
+      padding: 15px;
+      background: #090808;
       border: none;
+      box-shadow: 0px 1px 8px 3px red;
+    }
+
+    i.fa-whatsapp, .fa-google {
+      color: $white;
+      margin-left: 10px;
+      font-size: 20px;
+      padding: 5px;
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    i.fa-whatsapp {
+      color: #4CED69;
+    }
+    i.fa-google {
+      color: tomato;
     }
   }
 }
