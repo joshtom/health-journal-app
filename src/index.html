@@ -48,10 +48,27 @@
         <section id="que">
           <p id="text">How was your day?</p>
         </section>
+        <input type="radio" name="howdy" id="good" value="Good">
+        <input type="radio" name="howdy" id="fair" value="Fair">
+        <input type="radio" name="howdy" id="bad" value="Bad">
         <section id="ans">
-          <p> <span> 😃 </span> Good</p>
-          <p> <span> 😌 </span> Fair</p>
-          <p> <span> 😥 </span> Bad</p>
+            <label for="good">
+              <p aria-describedby="Your day" tabindex="0"> 
+                <span aria-label="good"> 😃 </span> Good
+              </p>
+           </label> 
+           <!-- ======================================== -->
+           <label for="fair">
+          <p> 
+            <span> 😌 </span> Fair
+          </p>
+          </label>
+          <!-- ========================================== -->
+          <label for="bad">
+            <p>
+                  <span> 😥 </span> Bad        
+            </p>
+          </label>
         </section>
     </div>
 
