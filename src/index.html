@@ -107,9 +107,15 @@
          <section id="que">
           <p id="text">Would you like to elaborate on what happened?</p>
         </section>
+        <input type="radio" name="elaborate" id="yes">
+        <input type="radio" name="elaborate" id="no">
         <section id="ans">
-          <p> <span> 👌 </span> Yes</p>
-          <p> <span> ⛔ </span> No</p>
+          <label for="yes">
+          <p aria-describedby="yes" tabindex="0"> <span aria-label="happy"> 👌 </span> Yes</p>
+          </label>
+          <label for="no">
+          <p aria-describedby="no" tabindex="0"> <span aria-label="angry"> ⛔ </span> No</p>
+          </label>
         </section>
       </div>
       <!-- If YES -->
@@ -123,12 +129,27 @@
         <section id="que">
           <p id="text">How did you feel throughout the day?</p>
         </section>
+        <input type="radio" name="feel" id="happy">
+        <input type="radio" name="feel" id="sad">
+        <input type="radio" name="feel" id="excited">
+        <input type="radio" name="feel" id="discouraged">
+        <input type="radio" name="feel" id="encouraged">
         <section id="ans">
-          <p> <span> 🤗 </span> Happy</p>
-          <p> <span> 😟 </span> Sad</p>
-          <p> <span> 😀 </span> Excited</p>
-          <p> <span> 😐 </span> Discouraged</p>
-          <p> <span> 😌 </span> Encouraged</p>
+          <label for="happy">
+          <p aria-describedby="happy" tabindex="0"> <span aria-label="happy"> 🤗 </span> Happy</p>
+          </label>
+          <label for="sad">
+          <p aria-describedby="sad" tabindex="0"> <span aria-label="sad"> 😟 </span> Sad</p>
+          </label>
+          <label for="excited">
+          <p aria-describedby="excited" tabindex="0"> <span aria-label="excited"> 😀 </span> Excited</p>
+          </label>
+          <label for="discouraged">
+          <p aria-describedby="discouraged" tabindex="0"> <span aria-label="discouraged"> 😐 </span> Discouraged</p>
+          </label>
+          <label for="encouraged">
+          <p aria-describedby="encouraged" tabindex="0"> <span aria-label="encouraged"> 😌 </span> Encouraged</p>
+          </label>
         </section>
       </div>
       <div id="slide6" class="slide s6">
