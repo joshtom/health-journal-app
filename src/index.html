@@ -76,13 +76,19 @@
         <section id="que">
           <p id="text">Okay - What made today really Good?</p>
         </section>
+        <input type="radio" name="today" id="lockdown">
+        <input type="radio" name="today" id="family">
+        <input type="radio" name="today" id="food">
+        <input type="radio" name="today" id="travelling">
+        <input type="radio" name="today" id="education">
+        <input type="radio" name="today" id="others">
         <section id="ans">
-          <p> <span> 🏠 </span> Lockdown</p>
-          <p> <span> 👪 </span> Family</p>
-          <p> <span> 🍲 </span> Food</p>
-          <p> <span> 🛍 </span> Travelling</p>
-          <p> <span> 🏫 </span> Education</p>
-          <p> <span> ✍️ </span> Others</p>
+          <p aria-describedby="lockdown" tabindex="0"> <span aria-label="lockdown"> 🏠 </span> Lockdown</p>
+          <p aria-describedby="family" tabindex="0"> <span aria-label="family"> 👪 </span> Family</p>
+          <p aria-describedby="food" tabindex="0"> <span aria-label="food"> 🍲 </span> Food</p>
+          <p aria-describedby="travelling" tabindex="0"> <span aria-label="travelling"> 🛍 </span> Travelling</p>
+          <p aria-describedby="education" tabindex="0"> <span aria-label="education"> 🏫 </span> Education</p>
+          <p aria-describedby="others" tabindex="0"> <span aria-label="others"> ✍️ </span> Others</p>
         </section>
       </div>
       <div id="slide3" class="slide s3">
