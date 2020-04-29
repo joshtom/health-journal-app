@@ -182,8 +182,7 @@ input[type=radio] {
         font-size: 40px;
         color: #fdfdfc; }
       .howdy #ans p:hover, .howdy #ans p:focus-within {
-        -webkit-transform: translateY(-2px);
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 0px 0px #e0a557,  -2px -2px 20px 0px #fdfdfc;
         transform: translateY(-2px); }
 
 .slide {
@@ -221,8 +220,7 @@ input[type=radio] {
         font-size: 40px;
         color: #fdfdfc; }
       .slide #ans p:hover, .slide #ans p:focus-within {
-        -webkit-transform: translateY(-2px);
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 0px 0px #e0a557,  -2px -2px 20px 0px #fdfdfc;
         transform: translateY(-2px); }
 
 .s2 {

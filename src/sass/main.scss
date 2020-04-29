@@ -225,9 +225,9 @@ input[type=radio] {
       }
 
       &:hover, &:focus-within {
-          -webkit-transform: translateY(-2px);
-          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-          transform: translateY(-2px);
+        box-shadow: 0px 0px 0px 0px #e0a557, 
+                    -2px -2px 20px 0px #fdfdfc;
+                    transform: translateY(-2px);
       }
     }
   }
@@ -274,9 +274,9 @@ input[type=radio] {
       }
 
       &:hover, &:focus-within {
-            -webkit-transform: translateY(-2px);
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-            transform: translateY(-2px);
+        box-shadow: 0px 0px 0px 0px #e0a557, 
+                    -2px -2px 20px 0px #fdfdfc;
+                    transform: translateY(-2px);
       }
     }
   }
