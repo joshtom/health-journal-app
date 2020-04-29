@@ -38,7 +38,7 @@
 
   // Listening for click event
 const _element = ($param) => { return document.querySelector($param) }
-const _getRadioVal = ($param) => { return document.getElementsByName($param) }
+const _getRadioVal = ($param) => { return document.querySelector($param).value }
 const _value = () => { return _element.value }
 
   
@@ -219,19 +219,13 @@ bellCall('#1229d3', '#000000')
 
   _element("#share").addEventListener('click', () => {
     // Get all input values
-    //  const howdy = _element("input[name='howdy']:checked").value;
-    //  const today = _element("input[name='today']:checked").value;
-    //  const elaborate = _element("input[name='elaborate']:checked").value;
-    //  const tellUs = _element("textarea#tell").value;
-    //  const feel = _element("input[name='feel']:checked").value;
+     const howdy = _getRadioVal("input[name='howdy']:checked");
+     const today = _getRadioVal("input[name='today']:checked");
+     const elaborate = _getRadioVal("input[name='elaborate']:checked");
+     const tellUs = _getRadioVal("textarea#tell");
+     const feel = _getRadioVal("input[name='feel']:checked");
 
-     const howdy = $("input[name='howdy']:checked").val();
-     const today = $("input[name='today']:checked").val();
-     const elaborate = $("input[name='elaborate']:checked").val();
-     const tellUs = $("textarea#tell").val();
-     const feel = $("input[name='feel']:checked").val();
-
-     console.log('Adding values to localstorage');
+     // Adding values to localstorage 
 
      populateStorage('howdyValue', howdy);
      populateStorage('todayValue', today);
@@ -239,7 +233,12 @@ bellCall('#1229d3', '#000000')
      populateStorage('tellUsValue', tellUs);
      populateStorage('feelValue', feel);
 
-     console.log('Values added to localstorage');
+     // Values added to localstorage
+
+    //  Redirect to another page when 
+    setTimeout(() => {
+      window.location="share.html";
+    }, 1500)
 
      
 
