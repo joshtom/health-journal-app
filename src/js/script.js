@@ -95,23 +95,6 @@ const _value = () => { return _element.value }
   const whatsappIcon = _element(".fa-whatsapp");
   const googleIcon = _element(".fa-google");
 
-  _element("#share").addEventListener('click', () => {
-    if (!whatsappIcon.classList.contains("active") || !googleIcon.classList.contains("active")) {    
-      btnTransition.to(".fa-whatsapp", 0.5, { opacity: 1, ease: "elastic.out(1, 0.3)" })
-                  .to("#or", 0.5, { opacity: 1, ease: "elastic.out(1, 0.3)" })
-                  .to(".fa-google", 0.5, { opacity: 1, ease: "elastic.out(1, 0.3)" });
-      whatsappIcon.classList.add("active");
-      googleIcon.classList.add("active");
-    } else {
-      btnTransition.to(".fa-whatsapp", 0.5, { opacity: 0, ease: "elastic.out(1, 0.3)" })
-                    .to("#or", 0.5, { opacity: 0, ease: "elastic.out(1, 0.3)" })
-                    .to(".fa-google", 0.5, { opacity: 0, ease: "elastic.out(1, 0.3)" })
-      whatsappIcon.classList.remove("active");
-      googleIcon.classList.remove("active");
-    }
-                    
-  })
-
 tl.from("#doc", {duration: .6, x: 1000, ease: "power", opacity: 0})
 
 tl.from("h1#heading", {duration: .6, x: 1000, ease: "power", opacity: 0})
@@ -224,3 +207,14 @@ bellCall('#1229d3', '#000000')
               (storage && storage.length !== 0);
       }
   }
+    const populateStorage = (key = 'key', value = 'value') => {
+      return localStorage.setItem(key, value);
+    }
+    const getStorage = (key = 'key') => {
+      return localStorage.getItem(key);
+    }
+  // Collecting the values and saving on localstorage
+
+  _element("#share").addEventListener('click', () => {
+    
+  })
