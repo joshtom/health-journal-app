@@ -129,7 +129,7 @@ bellCall('#1229d3', '#000000')
 
 // Submitting the emojis to localstorage and animating;
 
-  //  let howdy = _element("input[name='howdy']:checked").value;
+  
     const howdyLabel = document.querySelectorAll(".howdy #ans label");
     const slide2Label = document.querySelectorAll("#slide2 #ans label");
     const slide3Label = document.querySelectorAll("#slide3 #ans label");
@@ -207,14 +207,40 @@ bellCall('#1229d3', '#000000')
               (storage && storage.length !== 0);
       }
   }
+    //  Functions to get and set item to localstorage
     const populateStorage = (key = 'key', value = 'value') => {
       return localStorage.setItem(key, value);
     }
     const getStorage = (key = 'key') => {
       return localStorage.getItem(key);
     }
+
   // Collecting the values and saving on localstorage
 
   _element("#share").addEventListener('click', () => {
-    
+    // Get all input values
+    //  const howdy = _element("input[name='howdy']:checked").value;
+    //  const today = _element("input[name='today']:checked").value;
+    //  const elaborate = _element("input[name='elaborate']:checked").value;
+    //  const tellUs = _element("textarea#tell").value;
+    //  const feel = _element("input[name='feel']:checked").value;
+
+     const howdy = $("input[name='howdy']:checked").val();
+     const today = $("input[name='today']:checked").val();
+     const elaborate = $("input[name='elaborate']:checked").val();
+     const tellUs = $("textarea#tell").val();
+     const feel = $("input[name='feel']:checked").val();
+
+     console.log('Adding values to localstorage');
+
+     populateStorage('howdyValue', howdy);
+     populateStorage('todayValue', today);
+     populateStorage('elaborateValue', elaborate);
+     populateStorage('tellUsValue', tellUs);
+     populateStorage('feelValue', feel);
+
+     console.log('Values added to localstorage');
+
+     
+
   })
