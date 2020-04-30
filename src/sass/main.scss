@@ -408,18 +408,44 @@ nav {
   align-items: center;
 
   .container {
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: auto;
     background: rgba(0,0,0,.5);
     border-radius: 4px;
+    padding: 15px;
 
+    h1 {
+      color: $white;
+      text-align: center;
+    }
     form {
       padding: 10px;
       height: auto;
-      input, textarea {
+      input, textarea{
         border: none;
         border-bottom: 1px solid $white;
         width: 90%;
+        margin: 10px;
+        background: transparent;
+        padding: 10px;
+        outline: none;
+        color: $white;
+      }
+      input::placeholder, textarea::placeholder {
+        color: $white;
+      }
+      textarea, [contenteditable] {
+        color: $white;
+        caret-color: $white;
+      }
+      button {
+        padding: 10px;
+        border-radius: 4px;
+        background: $secondary;
+        color: $white;
+        border: none;
       }
     }
   }

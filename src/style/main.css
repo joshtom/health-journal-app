@@ -323,16 +323,38 @@ nav {
   justify-content: center;
   align-items: center; }
   #shareHtml .container {
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: auto;
     background: rgba(0, 0, 0, 0.5);
-    border-radius: 4px; }
+    border-radius: 4px;
+    padding: 15px; }
+    #shareHtml .container h1 {
+      color: #fdfdfc;
+      text-align: center; }
     #shareHtml .container form {
       padding: 10px;
       height: auto; }
       #shareHtml .container form input, #shareHtml .container form textarea {
         border: none;
         border-bottom: 1px solid #fdfdfc;
-        width: 90%; }
+        width: 90%;
+        margin: 10px;
+        background: transparent;
+        padding: 10px;
+        outline: none;
+        color: #fdfdfc; }
+      #shareHtml .container form input::placeholder, #shareHtml .container form textarea::placeholder {
+        color: #fdfdfc; }
+      #shareHtml .container form textarea, #shareHtml .container form [contenteditable] {
+        color: #fdfdfc;
+        caret-color: #fdfdfc; }
+      #shareHtml .container form button {
+        padding: 10px;
+        border-radius: 4px;
+        background: #429e79;
+        color: #fdfdfc;
+        border: none; }
 
 /*# sourceMappingURL=main.css.map */
