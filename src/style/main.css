@@ -333,10 +333,10 @@ nav {
     #shareHtml .container h1 {
       color: #fdfdfc;
       text-align: center; }
-    #shareHtml .container form {
+    #shareHtml .container #form {
       padding: 10px;
       height: auto; }
-      #shareHtml .container form input, #shareHtml .container form textarea {
+      #shareHtml .container #form input, #shareHtml .container #form textarea {
         border: none;
         border-bottom: 1px solid #fdfdfc;
         width: 90%;
@@ -345,12 +345,12 @@ nav {
         padding: 10px;
         outline: none;
         color: #fdfdfc; }
-      #shareHtml .container form input::placeholder, #shareHtml .container form textarea::placeholder {
+      #shareHtml .container #form input::placeholder, #shareHtml .container #form textarea::placeholder {
         color: #fdfdfc; }
-      #shareHtml .container form textarea, #shareHtml .container form [contenteditable] {
+      #shareHtml .container #form textarea, #shareHtml .container #form [contenteditable] {
         color: #fdfdfc;
         caret-color: #fdfdfc; }
-      #shareHtml .container form button {
+      #shareHtml .container #form button {
         padding: 10px;
         border-radius: 4px;
         background: #429e79;
