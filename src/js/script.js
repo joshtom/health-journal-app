@@ -35,6 +35,9 @@
   });
     });
   }
+  
+
+  
 
   // Listening for click event
 const _element = ($param) => { return document.querySelector($param) }
@@ -45,32 +48,16 @@ const _value = () => { return _element.value }
   // Animating text on landing page
 
   var tl = gsap.timeline(),
-  bell = gsap.timeline(),
   nav = gsap.timeline(),
   pgTransition = gsap.timeline(),
   slideTransition = gsap.timeline(),
   btnTransition = gsap.timeline(),
   section = 1;
 
-  function bellCall(cFrom = '#fff', cTo = '#fff') { //Setting default parameters to white
-    return bell.to("#bell",
-      {duration: 0.15, 
-       x: 10, 
-       fill: cFrom})
-  .to("#bell", 
-      { duration: 1, 
-       ease: "elastic.out(1, 0.3)", 
-       x: 0, 
-       fill: cTo})
-.repeat(-1)
-.repeatDelay(10)
-  }
-
   // Get started event listener
   _element("#getStarted").addEventListener('click', () => {
     pgTransition.to("#homepage", {duration: 1, x: '-100%', display: 'none', ease: 'power'})
       .from(".howdy", { duration: 1, y: '100%', display: 'flex', ease: 'back.out(1.7)' })
-      bellCall('#fff', '#fff');
   })   
 
   // Logic for next and previous button
@@ -115,8 +102,12 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
 
     for(var i = 0; i < howdyLabel.length; i++) {
       howdyLabel[i].addEventListener('click', () => {
+         //  Changing value based on the emoji the user clicks
+          const howdy = _getRadioVal("input[name='howdy']:checked");
+          localStorage.setItem('howdyValue', howdy);
+        const WHAT_MADE_TODAY = localStorage.getItem('howdyValue');
+        document.querySelector("span#really").innerHTML = `${WHAT_MADE_TODAY}`;
         setTimeout(() => {
-          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide2").offset().top}});
           if(section < 6) {
             section ++;
             gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
@@ -128,7 +119,6 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
     for(var i = 0; i < slide2Label.length; i++) {
       slide2Label[i].addEventListener('click', () => {
         setTimeout(() => {
-          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide3").offset().top}});
           if(section < 6) {
             section ++;
             gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
@@ -141,7 +131,6 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
       if(slide3Label[i].htmlFor === 'yes'){
         slide3Label[i].addEventListener('click', () => {
         setTimeout(() => {
-          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide4").offset().top}});
           if(section < 6) {
             section ++;
             gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
@@ -151,7 +140,6 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
       } else {
          slide3Label[i].addEventListener('click', () => {
         setTimeout(() => {
-          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide5").offset().top}});
           if(section < 6) {
             section ++;
             gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
@@ -164,7 +152,6 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
 
     tellUs.addEventListener('click', () => {
       setTimeout(() => {
-          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide6").offset().top}});
           if(section < 6) {
             section ++;
             gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
@@ -175,7 +162,6 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
     for(var i = 0; i < slide5Label.length; i++) {
       slide5Label[i].addEventListener('click', () => {
         setTimeout(() => {
-          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide6").offset().top}});
           if(section < 6) {
             section ++;
             gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
@@ -234,9 +220,7 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
      populateStorage('tellUsValue', tellUs);
      populateStorage('feelValue', feel);
 
-    //  Changing value based on the emoji the user clicks
-     const WHAT_MADE_TODAY = getStorage('howdyValue');
-     $("#really").html(`${WHAT_MADE_TODAY ? WHAT_MADE_TODAY : "____"}`)
+    
      // Values added to localstorage
 
     //  Redirect to another page when 
@@ -245,4 +229,5 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
     }, 1500);
     })
 
+    
    
