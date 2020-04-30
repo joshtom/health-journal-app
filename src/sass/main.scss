@@ -437,8 +437,10 @@ nav {
         color: $white;
       }
       textarea, [contenteditable] {
+        height: 200px;
         color: $white;
         caret-color: $white;
+        line-height: 1.6;
       }
       button {
         padding: 10px;

@@ -12,11 +12,7 @@
 
  
 
-  subject.innerHTML = ` Your day - ${getHowdy} 
-                        How was today? ${gettoday} 
-                        Elaborate ${getelaborate} 
-                        In detail ${gettellUs} 
-                        How did you feel ${getfeel}`;
+  subject.innerHTML = ` Your day? ${getHowdy}, What made today ${getHowdy}? ${gettoday}, Want to elaborate? ${getelaborate}, In details >  ${gettellUs} , How did you feel ${getfeel}`;
 
         const btn = document.querySelector("#shareNow");
         btn.addEventListener('click', (e) => {
@@ -25,7 +21,7 @@
             const email = document.querySelector("#Email").value;
             const subject = document.querySelector("textarea").value;
             if(name === ''|| email === ''|| subject === '') {
-                alert("Field empty");
+                alert("All field is required");
             } else if(name !== '' || email !== '' || subject !== ''){
             alert("Your health status has been shared");
 
