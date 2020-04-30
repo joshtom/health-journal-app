@@ -12,7 +12,11 @@
 
  
 
-  subject.innerHTML = `${getHowdy} ${gettoday} ${getelaborate} ${gettellUs} ${getfeel}`;
+  subject.innerHTML = ` Your day - ${getHowdy} 
+                        How was today? ${gettoday} 
+                        Elaborate ${getelaborate} 
+                        In detail ${gettellUs} 
+                        How did you feel ${getfeel}`;
 
         const btn = document.querySelector("#shareNow");
         btn.addEventListener('click', (e) => {

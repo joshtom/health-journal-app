@@ -215,9 +215,9 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
     const getStorage = (key = 'key') => {
       return localStorage.getItem(key);
     }
-
+    
   // Collecting the values and saving on localstorage
-
+  
   _element("#share").addEventListener('click', () => {
     // Get all input values
      const howdy = _getRadioVal("input[name='howdy']:checked");
@@ -234,6 +234,9 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
      populateStorage('tellUsValue', tellUs);
      populateStorage('feelValue', feel);
 
+    //  Changing value based on the emoji the user clicks
+     const WHAT_MADE_TODAY = getStorage('howdyValue');
+     $("#really").html(`${WHAT_MADE_TODAY ? WHAT_MADE_TODAY : "____"}`)
      // Values added to localstorage
 
     //  Redirect to another page when 
