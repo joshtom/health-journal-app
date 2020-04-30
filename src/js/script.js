@@ -239,8 +239,7 @@ tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)
     //  Redirect to another page when 
     setTimeout(() => {
       window.location="share.html";
-    }, 1500)
+    }, 1500);
+    })
 
-     
-
-  })
+   
