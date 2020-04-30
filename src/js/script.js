@@ -104,29 +104,6 @@ tl.from("#quote", {duration: .6, x: 1000, ease: "power", opacity: 0})
 tl.from("button#getStarted", {duration: 0.8, x: -500, ease: "elastic.out(1, 0.3)", opacity: 0})
 
 
-
-// Animate the notification icon
-bellCall('#1229d3', '#000000')
-
-    // Animate the nav Icon at the bottom
-    nav.to("nav .previous", { 
-      duration: 1,
-      x: -10,
-      ease: "elastic.in(1, 0.3)"
-     }).to("nav .previous",{
-       x: 0,
-       ease: "elastic.out(1, 0.3)"
-     }).repeat(-1).repeatDelay(2)
-
-    nav.to("nav .next", { 
-      duration: 1,
-      x: 10,
-      ease: "elastic.in(1, 0.3)"
-     }).to("nav .next",{
-       x: 0,
-       ease: "elastic.out(1, 0.3)"
-     }).repeat(-1).repeatDelay(2)
-
 // Submitting the emojis to localstorage and animating;
 
   
@@ -139,7 +116,11 @@ bellCall('#1229d3', '#000000')
     for(var i = 0; i < howdyLabel.length; i++) {
       howdyLabel[i].addEventListener('click', () => {
         setTimeout(() => {
-          gsap.to(window, 0.5, {scrollTo:{y:$("#slide2").offset().top}});
+          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide2").offset().top}});
+          if(section < 6) {
+            section ++;
+            gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
+          }
         }, 1000);  
       })
     }
@@ -147,7 +128,11 @@ bellCall('#1229d3', '#000000')
     for(var i = 0; i < slide2Label.length; i++) {
       slide2Label[i].addEventListener('click', () => {
         setTimeout(() => {
-          gsap.to(window, 0.5, {scrollTo:{y:$("#slide3").offset().top}});
+          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide3").offset().top}});
+          if(section < 6) {
+            section ++;
+            gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
+          }
         }, 1000);  
       })
     }
@@ -156,13 +141,21 @@ bellCall('#1229d3', '#000000')
       if(slide3Label[i].htmlFor === 'yes'){
         slide3Label[i].addEventListener('click', () => {
         setTimeout(() => {
-          gsap.to(window, 0.5, {scrollTo:{y:$("#slide4").offset().top}});
+          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide4").offset().top}});
+          if(section < 6) {
+            section ++;
+            gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
+          }
         }, 1000);  
       })
       } else {
          slide3Label[i].addEventListener('click', () => {
         setTimeout(() => {
-          gsap.to(window, 0.5, {scrollTo:{y:$("#slide5").offset().top}});
+          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide5").offset().top}});
+          if(section < 6) {
+            section ++;
+            gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
+          }
         }, 1000);  
       })
       }
@@ -171,14 +164,22 @@ bellCall('#1229d3', '#000000')
 
     tellUs.addEventListener('click', () => {
       setTimeout(() => {
-          gsap.to(window, 0.5, {scrollTo:{y:$("#slide6").offset().top}});
+          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide6").offset().top}});
+          if(section < 6) {
+            section ++;
+            gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
+          }
         }, 1000);  
       })
 
     for(var i = 0; i < slide5Label.length; i++) {
       slide5Label[i].addEventListener('click', () => {
         setTimeout(() => {
-          gsap.to(window, 0.5, {scrollTo:{y:$("#slide6").offset().top}});
+          // gsap.to(window, 0.5, {scrollTo:{y:$("#slide6").offset().top}});
+          if(section < 6) {
+            section ++;
+            gsap.to(window, 0.5, {scrollTo:{y:$("#slide" + section).offset().top}});
+          }
         }, 1000);  
       })
     }
